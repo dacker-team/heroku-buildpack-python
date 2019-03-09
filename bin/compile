@@ -254,7 +254,7 @@ source "$BIN_DIR/steps/hooks/post_compile"
 source "$BIN_DIR/steps/eggpath-fix2"
 
 # shellcheck source=bin/steps/pyodbc
-#source "$BIN_DIR/steps/pyodbc"
+source "$BIN_DIR/steps/pyodbc"
 
 # Store new artifacts in cache.
 
