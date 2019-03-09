@@ -42,7 +42,10 @@ if [ ! "$SKIP_PIP_INSTALL" ]; then
     # Smart Requirements handling
     cp requirements.txt .heroku/python/requirements-declared.txt
     /app/.heroku/python/bin/pip freeze --disable-pip-version-check > .heroku/python/requirements-installed.txt
-    python -m pip install --no-binary pymssql pymssql
+    
+    python -m /app/.heroku/python/bin/pip uninstall pymssql
+    python -m /app/.heroku/python/bin/pip install --no-binary pymssql pymssql
+    
     echo
 
     # Install test dependencies, for CI.
