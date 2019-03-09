@@ -43,8 +43,8 @@ if [ ! "$SKIP_PIP_INSTALL" ]; then
     cp requirements.txt .heroku/python/requirements-declared.txt
     /app/.heroku/python/bin/pip freeze --disable-pip-version-check > .heroku/python/requirements-installed.txt
     
-    python -m /app/.heroku/python/bin/pip uninstall pymssql
-    python -m /app/.heroku/python/bin/pip install --no-binary pymssql pymssql
+    /app/.heroku/python/bin/pip uninstall pymssql
+    /app/.heroku/python/bin/pip install --no-binary pymssql pymssql
     
     echo
 
